@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.ModifyAnimalFragment">
+
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/materialToolbarModify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/screen_background_light_transparent"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialToolbarModify">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D5CDEB"
+                android:drawableEnd="@android:drawable/arrow_down_float"
+                android:gravity="center_horizontal"
+                android:text="소유자 정보 입력 "
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutOwnerName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="100dp"
+                android:hint="소유자 이름">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <EditText
+                android:id="@+id/editTextPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:hint="전화번호"
+                android:inputType="phone"
+                android:maxLength="13"
+                tools:text="010-0000-0000" />
+
+            <TextView
+                android:id="@+id/textView324"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="#D5CDEB"
+                android:drawableEnd="@android:drawable/arrow_down_float"
+                android:gravity="center_horizontal"
+                android:text="동물 정보 입력 "
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutAnimalName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="100dp"
+                android:hint="동물 이름">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="동물종류"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/toggleGroupCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:checkedButton="@id/buttonDog"
+                app:singleSelection="true">
+
+                <Button
+                    android:id="@+id/buttonDog"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="강아지" />
+
+                <Button
+                    android:id="@+id/buttonCat"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="고양이" />
+
+                <Button
+                    android:id="@+id/buttonParrot"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="앵무새" />
+
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="성별"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/toggleGroupGender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:checkedButton="@id/buttonMale"
+                app:singleSelection="true">
+
+                <Button
+                    android:id="@+id/buttonMale"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="수컷" />
+
+                <Button
+                    android:id="@+id/buttonFemale"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="암컷" />
+
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="좋아하는간식"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/checkBoxAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="전체"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:checkedState="unchecked" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBoxApple"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="사과"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                <CheckBox
+                    android:id="@+id/checkBoxBanana"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="바나나"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                <CheckBox
+                    android:id="@+id/checkBoxJujube"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="대추"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView765"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="#D5CDEB"
+                android:drawableEnd="@android:drawable/arrow_down_float"
+                android:gravity="center_horizontal"
+                android:text="건강 정보"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+
+            <TextView
+                android:id="@+id/textViewAge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="나이"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/sliderAnimalAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stepSize="1"
+                android:valueFrom="0.0"
+                android:valueTo="50.0"
+                app:labelBehavior="gone" />
+
+            <TextView
+                android:id="@+id/textViewWeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="몸무게"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/sliderAnimalWeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stepSize="0.5"
+                android:valueFrom="0.0"
+                android:valueTo="100.0"
+                app:labelBehavior="gone" />
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/switchNeuteringSurgery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="중성화 여부"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
